@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, Typography, makeStyles, CardMedia, CardContent, CardActions } from '@material-ui/core';
+import { Grid, Card, CardActions, CardMedia, Typography, makeStyles, CardContent, Button } from '@material-ui/core';
 import PropTypes from 'prop-types';
 
 const useStyles = makeStyles(theme => ({
