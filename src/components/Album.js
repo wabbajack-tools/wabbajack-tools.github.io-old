@@ -7,11 +7,10 @@ export class Album extends Component{
     cards: [
       {
         id: 1,
-        cardTitle: 'Test',
-        cardContent: 'Nice',
-        cardImageURL: 'https://i.ytimg.com/vi/5_j_ilXDFxY/maxresdefault.jpg',
-        cardImageTitle: 'Hello There',
-        cardDescription: 'Very nice indeed'
+        Title: 'Test',
+        Image: 'https://i.ytimg.com/vi/5_j_ilXDFxY/maxresdefault.jpg',
+        ImageTitle: 'Hello There',
+        Description: 'Very nice indeed'
       }
     ]
   }
@@ -29,11 +28,10 @@ export class Album extends Component{
         return (
           <CardComponent
             key={card.id}
-            cardTitle={card.cardTitle}
-            cardContent={card.cardContent}
-            cardImageURL={card.cardImageURL}
-            cardImageTitle={card.cardImageTitle}
-            cardDescription={card.cardDescription}
+            Title={card.Title}
+            Image={card.Image}
+            ImageTitle={card.ImageTitle}
+            Description={card.Description}
             />
         );
       })}

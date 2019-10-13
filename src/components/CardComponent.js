@@ -22,14 +22,14 @@ export class CardComponent extends Component{
         <Card className={this.classes.card}>
           <CardMedia
             className={this.classes.cardMedia}
-            image={this.props.imageURL}
-            title={this.props.imageTitle}/>
+            image={this.props.Image}
+            title={this.props.ImageTitle}/>
           <CardContent className={this.classes.cardContent}>
             <Typography gutterBottom variant="h5" component="h2">
-              {this.props.cardTitle}
+              {this.props.Title}
             </Typography>
             <Typography>
-              {this.props.cardDescription}
+              {this.props.Description}
             </Typography>
           </CardContent>
           <CardActions>
