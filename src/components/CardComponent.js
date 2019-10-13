@@ -2,22 +2,20 @@ import React, { Component } from 'react';
 import { Grid, Card, CardActions, CardMedia, Typography, makeStyles, CardContent, Button } from '@material-ui/core';
 import PropTypes from 'prop-types';
 
-const useStyles = makeStyles(theme => ({
-  card: {
-    height: '100%',
-    display: 'flex',
-    flexDirection: 'column'
-  },
-  cardMedia: {
-    paddingTop: '56.25%' // 16:9
-  },
-  cardContent: {
-    flexGrow: 1
-  }
-}));
-
 export class CardComponent extends Component{
-  classes = useStyles();
+  classes = makeStyles(theme => ({
+    card: {
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column'
+    },
+    cardMedia: {
+      paddingTop: '56.25%' // 16:9
+    },
+    cardContent: {
+      flexGrow: 1
+    }
+  }));
   render(){
     return(
       <Grid item key={this.props.key} xs={12} sm={6} md={4}>

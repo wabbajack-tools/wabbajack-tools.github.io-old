@@ -2,13 +2,6 @@ import React, { Component } from 'react';
 import { makeStyles, Grid, Container } from '@material-ui/core';
 import CardComponent from './CardComponent';
 
-const useStyles = makeStyles(theme => ({
-  cardGrid: {
-    paddingTop: theme.spacing(8),
-    paddingBottom: theme.spacing(8)
-  }
-}));
-
 export class Album extends Component{
   state = {
     cards: [
@@ -22,7 +15,12 @@ export class Album extends Component{
       }
     ]
   }
-  classes = useStyles();
+  classes = makeStyles(theme => ({
+    cardGrid: {
+      paddingTop: theme.spacing(8),
+      paddingBottom: theme.spacing(8)
+    }
+  }));
   render(){
     return(
       <Container className={this.classes.cardGrid} maxWidth="md">
