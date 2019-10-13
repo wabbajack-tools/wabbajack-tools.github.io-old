@@ -12,7 +12,8 @@
     "react-scripts": "^3.2.0"
   },
   "scripts": {
-    "deploy": "npm run build && cp public/CNAME build/ && gh-pages -b master -d build",
+    "deploy": "gulp deploy",
+    "publish": "gh-pages -b master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -34,6 +35,10 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^2.1.1"
+    "gh-pages": "^2.1.1",
+    "gulp": "^4.0.2",
+    "gulp-change": "^1.0.2",
+    "gulp-rename": "^1.4.0",
+    "gulp-run": "^1.7.1"
   }
 }
