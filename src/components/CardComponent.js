@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export class Card extends Component{
+export class CardComponent extends Component{
   classes = useStyles();
   render(){
     return(
@@ -45,8 +45,8 @@ export class Card extends Component{
   }
 }
 
-Card.propTypes = {
+CardComponent.propTypes = {
   card: PropTypes.object.isRequired
 };
 
-export default Card;
+export default CardComponent;
