@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { makeStyles, Grid, Container, Typography, CssBaseline } from '@material-ui/core';
+import { makeStyles, Grid, Container, Typography } from '@material-ui/core';
 import CardComponent from './CardComponent';
 
 export class Album extends Component{
