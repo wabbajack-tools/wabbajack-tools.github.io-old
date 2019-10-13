@@ -22,6 +22,7 @@ export class CardComponent extends Component{
       <Grid item key={this.props.key} xs={12} sm={6} md={4}>
         <Card className={this.classes.card}>
           <CardMedia
+            component="img"
             className={this.classes.cardMedia}
             image={this.props.Image}
             title={this.props.ImageTitle}/>
