@@ -1,0 +1,16 @@
+{
+    "files.associations": {
+        ".eslintrc": "jsonc",
+        ".prettierrc": "jsonc",
+
+        ".eslintignore": "ignore",
+        ".flowconfig": "ignore"
+    },
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        ".git": true,
+        ".eslintcache": true,
+        "yarn.lock": true
+    }
+}
