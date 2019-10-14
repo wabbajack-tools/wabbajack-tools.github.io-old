@@ -2,9 +2,24 @@ import React, { Component } from 'react';
 import { Grid, Container, Typography } from '@material-ui/core';
 import CardComponent from './CardComponent';
 import albumStyle from "../assets/components/albumStyle";
-import modlistState from '../assets/states/modlistState';
+import axios from 'axios';
+const _ = require('underscore');
 
 export class Album extends Component{
+  modlistState = {};
+  componentDidMount(){
+    if(process.env.NODE_ENV === "production"){
+      axios
+        .get('https://raw.githubusercontent.com/wabbajack-tools/wabbajack-tools.github.io/code/src/assets/states/modlistState.json')
+        .then(res => {
+          this.modlistState = res.data;
+          this.forceUpdate();
+        })
+    }else{
+      this.modlistState = require('../assets/states/modlistState.json');
+      this.forceUpdate();
+    }
+  }
   render(){
     return(
       <div>
@@ -17,7 +32,7 @@ export class Album extends Component{
       </div>
       <Container className={albumStyle.cardGrid}>
       <Grid container spacing={4}>
-      {modlistState.cards.map(card => {
+      {_.map(this.modlistState, (card) => {
         return (
           <CardComponent
             key={card.id}

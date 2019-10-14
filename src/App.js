@@ -12,7 +12,7 @@ export class App extends Component {
     <CssBaseline/>
     {/*<AppBarComponent/>*/}
     <main>
-    {/*<Album/>*/}
+    <Album/>
     <footer className={globalStyle.footer}>
       <Copyright/>
     </footer>
