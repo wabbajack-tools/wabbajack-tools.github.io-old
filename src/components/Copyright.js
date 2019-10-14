@@ -4,7 +4,7 @@ import { Link, Typography } from '@material-ui/core';
 export class Copyright extends Component{
   render(){
     return(
-      <Typography variant="body2" color="textSecondary" align="Center">
+      <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://github.com/wabbajack-tools">Wabbajack</Link>
       {' '}
