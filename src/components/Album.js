@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { makeStyles, Grid, Container, Typography } from '@material-ui/core';
+import { Grid, Container, Typography } from '@material-ui/core';
 import CardComponent from './CardComponent';
+import albumStyle from "../assets/components/albumStyle";
 
 export class Album extends Component{
   state = {
@@ -28,27 +29,17 @@ export class Album extends Component{
       }
     ]
   }
-  classes = makeStyles(theme => ({
-    heroContent: {
-      backgroundColor: theme.palette.background.paper,
-      padding: theme.spacing(8, 0, 6)
-    },
-    cardGrid: {
-      paddingTop: theme.spacing(8),
-      paddingBottom: theme.spacing(8)
-    }
-  }));
   render(){
     return(
       <div>
-      <div className={this.classes.heroContent}>
+      <div className={albumStyle.heroContent}>
       <Container maxWidth="sm">
         <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
           Featured Modlists
         </Typography>
       </Container>
       </div>
-      <Container className={this.classes.cardGrid} maxWidth="md">
+      <Container className={albumStyle.cardGrid} maxWidth="md">
       <Grid container spacing={4}>
       {this.state.cards.map(card => {
         return (
