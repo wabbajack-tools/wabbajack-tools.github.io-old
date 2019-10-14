@@ -1,16 +1,11 @@
 import React, {Component} from 'react';
 import Copyright from './components/Copyright';
 import Album from './components/Album';
+import globalStyle from './assets/components/globalStyle';
 import { CssBaseline, makeStyles } from '@material-ui/core';
 import AppBarComponent from './components/AppBarComponent';
 
 export class App extends Component {
-  classes = makeStyles(theme => ({
-    footer: {
-      backgroundColor: theme.palette.background.paper,
-      padding: theme.spacing(6)
-    }
-  }));
   render(){
   return (
     <React.Fragment>
@@ -18,7 +13,7 @@ export class App extends Component {
     {/*<AppBarComponent/>*/}
     <main>
     {/*<Album/>*/}
-    <footer className={this.classes.footer}>
+    <footer className={globalStyle.footer}>
       <Copyright/>
     </footer>
     </main>
