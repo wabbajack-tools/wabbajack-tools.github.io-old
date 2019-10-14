@@ -3,6 +3,7 @@ import 'typeface-roboto';
 import { CssBaseline } from '@material-ui/core';
 import globalStyle from './assets/components/globalStyle';
 import AppBarComponent from './components/AppBarComponent';
+import Parallax from './components/Parallax';
 import Copyright from './components/Copyright';
 import Album from './components/Album';
 
@@ -11,6 +12,7 @@ export class App extends Component {
   return (
     <React.Fragment>
     <CssBaseline/>
+    <main>
     <AppBarComponent
       color="transparent"
       title="Wabbajack"
@@ -19,8 +21,11 @@ export class App extends Component {
         height: 400,
         color: 'white'
       }}/>
-    <main>
-    {/*<Album/>*/}
+    <Parallax filter image={require('./assets/banner.png')}>
+      <div>
+      </div>
+    </Parallax>
+    {<Album/>}
     <footer className={globalStyle.footer}>
       <Copyright/>
     </footer>

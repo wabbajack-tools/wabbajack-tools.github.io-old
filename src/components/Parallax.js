@@ -24,7 +24,7 @@ export default function Parallax(props){
     }
     return function cleanup(){
       if(window.innerWidth >= 768){
-        window.removeEventListener("scroll", resetTransform)l
+        window.removeEventListener("scroll", resetTransform);
       }
     };
   });
