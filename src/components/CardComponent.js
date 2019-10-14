@@ -1,32 +1,19 @@
 import React, { Component } from 'react';
-import { Grid, Card, CardActions, CardMedia, Typography, makeStyles, CardContent, Button } from '@material-ui/core';
+import { Grid, Card, CardActions, CardMedia, Typography, CardContent, Button } from '@material-ui/core';
 import PropTypes from 'prop-types';
+import cardStyle from '../assets/components/cardStyle';
 
 export class CardComponent extends Component{
-  classes = makeStyles(theme => ({
-    card: {
-      height: '100%',
-      display: 'flex',
-      flexDirection: 'column'
-    },
-    cardMedia: {
-      height: 0,
-      paddingTop: '56.25%' // 16:9
-    },
-    cardContent: {
-      flexGrow: 1
-    }
-  }));
   render(){
     return(
       <Grid item key={this.props.key} xs={12} sm={6} md={4}>
-        <Card className={this.classes.card}>
+        <Card className={cardStyle.card}>
           <CardMedia
             component="img"
-            className={this.classes.cardMedia}
+            className={cardStyle.media}
             image={this.props.Image}
             title={this.props.ImageTitle}/>
-          <CardContent className={this.classes.cardContent}>
+          <CardContent className={cardStyle.content}>
             <Typography gutterBottom variant="h5" component="h2">
               {this.props.Title}
             </Typography>
