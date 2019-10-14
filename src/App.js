@@ -11,7 +11,14 @@ export class App extends Component {
   return (
     <React.Fragment>
     <CssBaseline/>
-    <AppBarComponent/>
+    <AppBarComponent
+      color="transparent"
+      title="Wabbajack"
+      fixed
+      changeColorOnScroll={{
+        height: 400,
+        color: 'white'
+      }}/>
     <main>
     {/*<Album/>*/}
     <footer className={globalStyle.footer}>
