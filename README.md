@@ -1,6 +1,6 @@
 # Wabbajack.org
 
-Available at: [wabbajack.org](https://wabbajack.org)
+Available at: [wabbajack.org](https://www.wabbajack.org)
 
 ## Contributing
 
