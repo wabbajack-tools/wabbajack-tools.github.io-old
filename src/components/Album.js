@@ -25,6 +25,7 @@ export class Album extends Component{
             Image={card.Image}
             ImageTitle={card.ImageTitle}
             Description={card.Description}
+            Link={card.Link}
             />
         );
       })}

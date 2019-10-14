@@ -22,7 +22,7 @@ export class CardComponent extends Component{
             </Typography>
           </CardContent>
           <CardActions>
-            <Button size="small" color="primary">
+            <Button size="small" color="primary" href={this.props.Link}>
               View
             </Button>
           </CardActions>
