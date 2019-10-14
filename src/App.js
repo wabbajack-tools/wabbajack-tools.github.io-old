@@ -1,18 +1,19 @@
 import React, {Component} from 'react';
+import 'typeface-roboto';
+import { CssBaseline } from '@material-ui/core';
+import globalStyle from './assets/components/globalStyle';
+import AppBarComponent from './components/AppBarComponent';
 import Copyright from './components/Copyright';
 import Album from './components/Album';
-import globalStyle from './assets/components/globalStyle';
-import { CssBaseline } from '@material-ui/core';
-import AppBarComponent from './components/AppBarComponent';
 
 export class App extends Component {
   render(){
   return (
     <React.Fragment>
     <CssBaseline/>
-    {/*<AppBarComponent/>*/}
+    <AppBarComponent/>
     <main>
-    <Album/>
+    {/*<Album/>*/}
     <footer className={globalStyle.footer}>
       <Copyright/>
     </footer>

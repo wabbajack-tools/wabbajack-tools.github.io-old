@@ -54,6 +54,7 @@
     "gulp-change": "^1.0.2",
     "gulp-rename": "^1.4.0",
     "gulp-run": "^1.7.1",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "typeface-roboto": "^0.0.75"
   }
 }
