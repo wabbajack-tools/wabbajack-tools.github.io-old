@@ -1,39 +1,48 @@
-import React, {Component} from 'react';
-import 'typeface-roboto';
-import { CssBaseline } from '@material-ui/core';
-import styles from './assets/components/globalStyle';
-import AppBarComponent from './components/AppBarComponent';
-import Parallax from './components/Parallax';
-import Copyright from './components/Copyright';
-import Album from './components/Album';
-import { makeStyles } from '@material-ui/styles';
+import React from 'react';
+
+import { makeStyles } from '@material-ui/core/styles';
+
+import Header from './components/Header/Header';
+import Footer from './components/Extra/Footer';
+import GridContainer from './components/Grid/GridContainer';
+import GridItem from './components/Grid/GridItem';
+import Parallax from './components/Extra/Parallax';
+
+import styles from './assets/js/indexStyle';
+import clsx from 'clsx';
 
 const useStyles = makeStyles(styles);
 
 export default function App() {
   const classes = useStyles();
   return (
-    <React.Fragment>
-    <CssBaseline/>
-    <main>
-    <AppBarComponent
-      color="transparent"
-      title="Wabbajack"
-      fixed
-      changeColorOnScroll={{
-        height: 400,
-        color: 'white'
-      }}/>
-    <Parallax filter image={require('./assets/banner.png')}>
-      <div>
+    <div>
+      <Header
+        color="transparent"
+        title="Wabbajack"
+        fixed
+        changeColorOnScroll={{
+          height: 400,
+          color: "white"
+        }}/>
+      <Parallax filter image={require("./assets/img/banner.png")}>
+        <div className={classes.container}>
+          <GridContainer>
+            <GridItem xs={12} sm={12} md={6}>
+              <h1 className={classes.title}>Wabbajack</h1>
+              <h4>
+                An automated modlist installer for TES/Fallout games.
+              </h4>
+            </GridItem>
+          </GridContainer>
+        </div>
+      </Parallax>
+      <div className={clsx(classes.main, classes.mainRaised)}>
+        <div className={classes.container}>
+        </div>
       </div>
-    </Parallax>
-    {<Album/>}
-    <footer className={classes.footer}>
-      <Copyright/>
-    </footer>
-    </main>
-    </React.Fragment>
+      <Footer/>
+    </div>
   );
 }
 
