@@ -1,25 +1,24 @@
+import uuid from 'uuid';
+
 const modlistState = {
   cards: [
     {
-      id: 1,
-      Title: 'Lexy\'s LOTD for Wabbajack',
-      Image: 'https://i.ytimg.com/vi/Sk_ejbczO28/hqdefault.jpg',
-      ImageTitle: 'Hello There',
-      Description: 'Something'
+      id: uuid.v4(),
+      Title: '',
+      Image: '',
+      ImageTitle: '',
+      Description: '',
+      Author: '',
+      Link: ''
     },
     {
-      id: 2,
-      Title: 'Unofficial Bevilex Autoinstaller',
-      Image: 'https://i.ytimg.com/vi/olcx0zqXszk/maxresdefault.jpg',
-      ImageTitle: 'Hello There',
-      Description: 'Something #2'
-    },
-    {
-      id: 3,
-      Title: 'Unofficial Viva New Vegas Installer',
+      id: uuid.v4(),
+      Title: 'The best modlist on earth',
       Image: 'https://ohmy.disney.com/wp-content/uploads/2014/03/Deep-Thoughts-with-Kronk-Self-Affirmation.png',
-      ImageTitle: 'Hello There',
-      Description: 'Something #3'
+      ImageTitle: 'Deep Thoughts with Kronk',
+      Description: 'This modlist may only have 5 mods but every mod is hand selected!',
+      Author: 'erri120',
+      Link: 'https://tinyurl.com/l4uccqj'
     }
   ]
 }
