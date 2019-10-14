@@ -1,14 +1,17 @@
 import React, {Component} from 'react';
 import 'typeface-roboto';
 import { CssBaseline } from '@material-ui/core';
-import globalStyle from './assets/components/globalStyle';
+import styles from './assets/components/globalStyle';
 import AppBarComponent from './components/AppBarComponent';
 import Parallax from './components/Parallax';
 import Copyright from './components/Copyright';
 import Album from './components/Album';
+import { makeStyles } from '@material-ui/styles';
 
-export class App extends Component {
-  render(){
+const useStyles = makeStyles(styles);
+
+export default function App() {
+  const classes = useStyles();
   return (
     <React.Fragment>
     <CssBaseline/>
@@ -26,13 +29,11 @@ export class App extends Component {
       </div>
     </Parallax>
     {<Album/>}
-    <footer className={globalStyle.footer}>
+    <footer className={classes.footer}>
       <Copyright/>
     </footer>
     </main>
     </React.Fragment>
   );
-  }
 }
 
-export default App;
