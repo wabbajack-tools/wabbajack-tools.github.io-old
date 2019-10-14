@@ -15,12 +15,12 @@ export class App extends Component {
   return (
     <React.Fragment>
     <CssBaseline/>
-    <AppBarComponent/>
+    {/*<AppBarComponent/>*/}
     <main>
-    <Album/>
-      <footer className={this.classes.footer}>
+    {/*<Album/>*/}
+    <footer className={this.classes.footer}>
       <Copyright/>
-      </footer>
+    </footer>
     </main>
     </React.Fragment>
   );
