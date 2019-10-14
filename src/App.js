@@ -8,6 +8,8 @@ import GridContainer from './components/Grid/GridContainer';
 import GridItem from './components/Grid/GridItem';
 import Parallax from './components/Extra/Parallax';
 
+import InfoSection from './sections/InfoSection';
+
 import styles from './assets/js/indexStyle';
 import clsx from 'clsx';
 
@@ -18,15 +20,15 @@ export default function App() {
   return (
     <div>
       <Header
-        color="transparent"
+        color="black"
         title="Wabbajack"
         fixed
         changeColorOnScroll={{
           height: 400,
           color: "white"
         }}/>
-      <Parallax filter image={require("./assets/img/banner.png")}>
-        <div className={classes.container}>
+      <Parallax image={require("./assets/img/banner.png")}>
+        {/*<div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={6}>
               <h1 className={classes.title}>Wabbajack</h1>
@@ -35,10 +37,11 @@ export default function App() {
               </h4>
             </GridItem>
           </GridContainer>
-        </div>
+      </div>*/}
       </Parallax>
       <div className={clsx(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
+          <InfoSection/>
         </div>
       </div>
       <Footer/>
