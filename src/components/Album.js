@@ -15,7 +15,7 @@ export class Album extends Component{
         </Typography>
       </Container>
       </div>
-      <Container className={albumStyle.cardGrid} maxWidth="md">
+      <Container className={albumStyle.cardGrid}>
       <Grid container spacing={4}>
       {modlistState.cards.map(card => {
         return (
@@ -23,6 +23,7 @@ export class Album extends Component{
             key={card.id}
             Title={card.Title}
             Image={card.Image}
+            Author={card.Author}
             ImageTitle={card.ImageTitle}
             Description={card.Description}
             Link={card.Link}

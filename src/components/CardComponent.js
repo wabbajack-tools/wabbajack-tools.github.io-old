@@ -14,10 +14,13 @@ export class CardComponent extends Component{
             image={this.props.Image}
             title={this.props.ImageTitle}/>
           <CardContent className={cardStyle.content}>
-            <Typography gutterBottom variant="h5" component="h2">
+            <Typography gutterBottom variant="h5" component="h2" color="textPrimary">
               {this.props.Title}
             </Typography>
-            <Typography>
+            <Typography color="textSecondary" style={{marginBottom: 5}}>
+              {this.props.Author}
+            </Typography>
+            <Typography color="textSecondary">
               {this.props.Description}
             </Typography>
           </CardContent>
