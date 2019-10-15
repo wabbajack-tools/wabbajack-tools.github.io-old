@@ -14,12 +14,13 @@ export default function InfoSection() {
   return (
     <div className={classes.section}>
     <GridContainer justify="center">
-    <GridItem xs={12} sm={12} md={8}>
-      <h2 className={classes.title}>Wabbajack - An automated modlist installer for TES/Fallout games</h2>
+    <GridItem xs={12} sm={12} md={10}>
+      <h2 className={classes.title}>An automated modlist installer for TES/Fallout games</h2>
       <h5 className={classes.description}>
       The general idea behind this program is fairly simple.
-      Given a Mod Organizer 2 folder and profile,
-      generate list of instructions that will allow a program to automatically
+      Input your Mod Organizer 2 folder and profile and get a
+      get a list of instructions as output. These instruction can be used by other
+      users  to automatically
       recreate the contents of the folder on another machine.
       Think of it as replication, but without ever distributing copyrighted
       files or syncing data between the source and destination machine.

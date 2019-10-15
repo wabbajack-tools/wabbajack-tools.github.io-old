@@ -1,4 +1,4 @@
-import { title } from '../globalStyle';
+import { title, defaultFont } from '../globalStyle';
 
 const infoSectionStyle = {
   section: {
@@ -13,8 +13,11 @@ const infoSectionStyle = {
     textDecoration: 'none'
   },
   description: {
+    ...defaultFont,
     textAlign: 'left',
-    color: '#999'
+    fontSize: "14px",
+    color: 'black',
+    textDecoration: 'none'
   }
 }
 
