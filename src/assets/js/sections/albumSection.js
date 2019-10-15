@@ -4,6 +4,9 @@ const albumStyle = {
   section: {
     padding: "70px 0"
   },
+  card: {
+    maxWidth: 345
+  },
   container,
   title: {
     ...title,

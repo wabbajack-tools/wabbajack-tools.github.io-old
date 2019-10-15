@@ -4,11 +4,9 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import GridContainer from './../components/Grid/GridContainer';
 import GridItem from './../components/Grid/GridItem';
-import Card from './../components/Card/Card';
+import CardAlbum from './../components/Card/CardAlbum';
 
 import style from './../assets/js/sections/albumSection';
-import CardHeader from '../components/Card/CardHeader';
-import CardBody from '../components/Card/CardBody';
 
 const useStyles = makeStyles(style);
 
@@ -22,14 +20,14 @@ export default function AlbumSection() {
         </div>
         <GridContainer>
           <GridItem xs={12} sm={12} md={6}>
-            <Card>
-              <CardHeader><h3>Title</h3></CardHeader>
-              <CardBody>
-              <p className={classes.description}>
-                Some random description
-              </p>
-              </CardBody>
-            </Card>
+          <CardAlbum
+            title="Lemon Icebox Pie"
+            links={{
+              imageLink: "https://www.lovelesscafe.com/uploads/recipeimages/Lemon-Icebox-Pie-2018-web.jpg",
+              readmeLink: "https://www.lovelesscafe.com/recipes/lemon-icebox-pie"
+            }}
+            description="This Southern Lemon Icebox pie is packed with tangy-sweet flavor. A perfect complement to any meal!"
+            />
           </GridItem>
         </GridContainer>
       </div>
