@@ -1,7 +1,6 @@
 import React from 'react';
 import Carousel from 'react-slick';
 import PropTypes from 'prop-types';
-const _ = require('underscore');
 
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -10,7 +9,7 @@ import GridItem from './../Grid/GridItem';
 import Card from './Card';
 
 import styles from './../../assets/js/components/carouselStyle.js';
-import GridItem from './../Grid/GridItem';
+const _ = require('underscore');
 
 const useStyles = makeStyles(styles);
 
@@ -33,12 +32,14 @@ export default function CardCarousel(props) {
           <Card carousel>
           <Carousel {...settings}>
           {_.map(cards, (card) => {
+            return (
             <div>
               <img src={card.Image} alt={card.ImageTitle} className="slick-image"/>
               <div className="slick-caption">
                 <h4>{card.Title}</h4>
               </div>
             </div>
+            );
           })}
           </Carousel>
           </Card>
@@ -49,6 +50,6 @@ export default function CardCarousel(props) {
   )
 }
 
-CardCarousel.PropTypes = {
+CardCarousel.propTypes = {
   cards: PropTypes.node.isRequired
 };

@@ -24,7 +24,7 @@ export default function Card(props){
   )
 }
 
-Card.PropTypes = {
+Card.propTypes = {
   className: PropTypes.string,
   plain: PropTypes.bool,
   carousel: PropTypes.bool,
