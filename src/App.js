@@ -8,6 +8,7 @@ import Parallax from './components/Extra/Parallax';
 
 import InfoSection from './sections/InfoSection';
 import CarouselSection from './sections/CarouselSection';
+import AlbumSection from './sections/AlbumSection';
 
 import styles from './assets/js/indexStyle';
 import clsx from 'clsx';
@@ -43,6 +44,7 @@ export default function App() {
           <InfoSection/>
         </div>
         {/*<CarouselSection/>*/}
+        <AlbumSection/>
       </div>
       <Footer/>
     </div>
