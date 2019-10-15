@@ -26,7 +26,7 @@ export default function App() {
           height: 400,
           color: "white"
         }}/>
-      <Parallax image={require("./assets/img/banner.png")}>
+      <Parallax image={require("./assets/img/banner_1920px.png")}>
         {/*<div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={6}>
@@ -42,7 +42,7 @@ export default function App() {
         <div className={classes.container}>
           <InfoSection/>
         </div>
-        <CarouselSection/>
+        {/*<CarouselSection/>*/}
       </div>
       <Footer/>
     </div>
