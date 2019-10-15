@@ -30,6 +30,7 @@ export default function Footer(props){
                 href="https://github.com/wabbajack-tools/wabbajack"
                 className={classes.block}
                 target="_blank"
+                rel="noopener noreferrer"
                 >GitHub</a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
@@ -37,6 +38,7 @@ export default function Footer(props){
                 href="https://discord.gg/zgbrkmA"
                 className={classes.block}
                 target="_blank"
+                rel="noopener noreferrer"
                 >Discord</a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
@@ -44,6 +46,7 @@ export default function Footer(props){
                 href="https://www.patreon.com/user?u=11907933"
                 className={classes.block}
                 target="_blank"
+                rel="noopener noreferrer"
                 >Patreon</a>
             </ListItem>
           </List>
@@ -54,6 +57,7 @@ export default function Footer(props){
             href="https://github.com/wabbajack-tools"
             className={aClasses}
             target="_blank"
+            rel="noopener noreferrer"
             >Wabbajack Team</a>
         </div>
       </div>
