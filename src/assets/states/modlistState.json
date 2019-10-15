@@ -1,42 +1,67 @@
 [
   {
-    "Title": "HighNoon Jhin",
-    "Image": "https://static2.lolwallpapers.net/2016/01/High-Noon-Jhin.jpg",
-    "ImageTitle": "",
+    "Title": "High Noon Jhin",
     "Description": "",
     "Author": "",
-    "Link": ""
+    "Game": "skyrim",
+    "Verified": false,
+    "Links": {
+      "Image": "https://static2.lolwallpapers.net/2016/01/High-Noon-Jhin.jpg",
+      "Readme": "",
+      "Download": "",
+      "MachineURL": "high_noon_jhin"
+    }
   },
   {
     "Title": "Blood Moon Jhin",
-    "Image": "https://static2.lolwallpapers.net/2017/02/5897079d48223.jpg",
-    "ImageTitle": "",
     "Description": "",
     "Author": "",
-    "Link": ""
+    "Game": "oblivion",
+    "Verified": false,
+    "Links": {
+      "Image": "https://static2.lolwallpapers.net/2017/02/5897079d48223.jpg",
+      "Readme": "",
+      "Download": "",
+      "MachineURL": "blood_moon_jhin"
+    }
   },
   {
     "Title": "SKT Jhin",
-    "Image": "https://1.bp.blogspot.com/--rFCFBTm7js/WUmF3FsJLEI/AAAAAAAAncs/YhUdNYqoqzgo0KD31KPIWk9zD92b0LucwCLcBGAs/s1600/e442c5e6fcf216e8.jpg",
-    "ImageTitle": "",
     "Description": "",
     "Author": "",
-    "Link": ""
+    "Game": "specialedition",
+    "Verified": true,
+    "Links": {
+      "Image": "https://1.bp.blogspot.com/--rFCFBTm7js/WUmF3FsJLEI/AAAAAAAAncs/YhUdNYqoqzgo0KD31KPIWk9zD92b0LucwCLcBGAs/s1600/e442c5e6fcf216e8.jpg",
+      "Readme": "",
+      "Download": "",
+      "MachineURL": "skt_jhin"
+    }
   },
   {
     "Title": "Project Jhin",
-    "Image": "http://www.lol-wallpapers.com/wp-content/uploads/2018/05/PROJECT-Jhin-Splash-Art-HD-4k-Wallpaper-Background-Official-Art-Artwork-League-of-Legends-lol.jpg",
-    "ImageTitle": "",
     "Description": "",
     "Author": "",
-    "Link": ""
+    "Game": "fallout4",
+    "Verified": true,
+    "Links": {
+      "Image": "http://www.lol-wallpapers.com/wp-content/uploads/2018/05/PROJECT-Jhin-Splash-Art-HD-4k-Wallpaper-Background-Official-Art-Artwork-League-of-Legends-lol.jpg",
+      "Readme": "",
+      "Download": "",
+      "MachineURL": "project_jhin"
+    }
   },
   {
     "Title": "Dark Cosmic Jhin",
-    "Image": "https://3.bp.blogspot.com/-gKc8dgaGUts/XO98d6J20yI/AAAAAAAAGls/hqn1xGEz-W8_lacSnURp6lyns4e_Nxr7gCKgBGAs/w4096-h2304-p-k-no-nu/dark-cosmic-jhin-splash-art-lol-4K-87.jpg",
-    "ImageTitle": "",
     "Description": "",
     "Author": "",
-    "Link": ""
+    "Game": "morrowind",
+    "Verified": true,
+    "Links": {
+      "Image": "https://3.bp.blogspot.com/-gKc8dgaGUts/XO98d6J20yI/AAAAAAAAGls/hqn1xGEz-W8_lacSnURp6lyns4e_Nxr7gCKgBGAs/w4096-h2304-p-k-no-nu/dark-cosmic-jhin-splash-art-lol-4K-87.jpg",
+      "Readme": "",
+      "Download": "",
+      "MachineURL": "dark_cosmic_jhin"
+    }
   }
 ]

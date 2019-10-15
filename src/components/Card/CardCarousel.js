@@ -34,7 +34,7 @@ export default function CardCarousel(props) {
           {_.map(cards, (card) => {
             return (
             <div>
-              <img src={card.Image} alt={card.ImageTitle} className="slick-image"/>
+              <img src={card.Links.Image} alt={card.Title} className="slick-image"/>
               <div className="slick-caption">
                 <h4>{card.Title}</h4>
               </div>
