@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from 'axios';
 
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -8,9 +7,9 @@ import Footer from './components/Extra/Footer';
 import GridContainer from './components/Grid/GridContainer';
 import GridItem from './components/Grid/GridItem';
 import Parallax from './components/Extra/Parallax';
-import CardCarousel from './components/Card/CardCarousel';
 
 import InfoSection from './sections/InfoSection';
+import CarouselSection from './sections/CarouselSection';
 
 import styles from './assets/js/indexStyle';
 import clsx from 'clsx';
@@ -19,16 +18,6 @@ const useStyles = makeStyles(styles);
 
 export default function App() {
   const classes = useStyles();
-  let modlists = {};
-  if(process.env.NODE_ENV === "production"){
-    axios
-      .get('https://raw.githubusercontent.com/wabbajack-tools/wabbajack-tools.github.io/code/src/assets/states/modlistState.json')
-      .then(res => {
-        modlists = res.data;
-      })
-  }else{
-    modlists = require('./assets/states/modlistState.json');
-  }
   return (
     <div>
       <Header
@@ -55,7 +44,7 @@ export default function App() {
         <div className={classes.container}>
           <InfoSection/>
         </div>
-        <CardCarousel cards={modlists}/>
+        <CarouselSection/>
       </div>
       <Footer/>
     </div>
