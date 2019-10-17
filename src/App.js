@@ -20,12 +20,12 @@ export default function App() {
   return (
     <div>
       <Header
-        color="black"
+        color="transparent"
         title="Wabbajack"
         fixed
         changeColorOnScroll={{
           height: 400,
-          color: "white"
+          color: "black"
         }}/>
       <Parallax image={require("./assets/img/banner_dark.png")}>
         {/*<div className={classes.container}>
