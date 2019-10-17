@@ -69,6 +69,17 @@ const infoColor = "#03DAC6";
 const roseColor = "#FC86C7";
 const grayColor = "#121212";
 
+const elevation0 = "#121212";
+const elevation1 = "#1E1E1E";
+const elevation2 = "#222222";
+const elevation3 = "#242424";
+const elevation4 = "#272727";
+const elevation6 = "#2C2C2C";
+const elevation8 = "#2D2D2D";
+const elevation12 = "#323232";
+const elevation16 = "#353535";
+const elevation24 = "#383838";
+
 const primaryBoxShadow = {
   boxShadow:
     "0 12px 20px -10px rgba(156, 39, 176, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(156, 39, 176, 0.2)"
@@ -187,6 +198,16 @@ export {
   infoColor,
   roseColor,
   grayColor,
+  elevation0,
+  elevation1,
+  elevation2,
+  elevation3,
+  elevation4,
+  elevation6,
+  elevation8,
+  elevation12,
+  elevation16,
+  elevation24,
   primaryBoxShadow,
   infoBoxShadow,
   successBoxShadow,
