@@ -27,7 +27,7 @@ export default function App() {
           height: 400,
           color: "white"
         }}/>
-      <Parallax image={require("./assets/img/banner_1920px.png")}>
+      <Parallax image={require("./assets/img/banner_dark.png")}>
         {/*<div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={6}>
