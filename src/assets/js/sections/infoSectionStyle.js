@@ -16,7 +16,7 @@ const infoSectionStyle = {
     ...defaultFont,
     textAlign: 'left',
     fontSize: "14px",
-    color: 'black',
+    color: 'white',
     textDecoration: 'none'
   }
 }

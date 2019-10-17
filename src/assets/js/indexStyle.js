@@ -1,4 +1,4 @@
-import { container, title, elevation0, elevation2 } from './globalStyle';
+import { container, title, primaryColor, elevation0, elevation2 } from './globalStyle';
 
 const indexStyle = {
   container: {
@@ -12,7 +12,7 @@ const indexStyle = {
     position: 'relative',
     marginTop: '30px',
     minHeight: '32px',
-    color: '#FFFFFF',
+    color: primaryColor,
     textDecoration: 'none'
   },
   main: {

@@ -25,7 +25,7 @@ export default function App() {
         fixed
         changeColorOnScroll={{
           height: 400,
-          color: "black"
+          color: "dark"
         }}/>
       <Parallax image={require("./assets/img/banner_dark.png")}>
         {/*<div className={classes.container}>
@@ -43,7 +43,7 @@ export default function App() {
         <div className={classes.container}>
           <InfoSection/>
         </div>
-        {/*<CarouselSection/>*/}
+        <CarouselSection/>
         <AlbumSection/>
       </div>
       <Footer/>

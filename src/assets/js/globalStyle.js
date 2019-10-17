@@ -58,7 +58,8 @@ const card = {
 const defaultFont = {
   fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
   fontWeight: "300",
-  lineHeight: "1.5em"
+  lineHeight: "1.5em",
+  color: '#FFFFFF'
 };
 
 const primaryColor = "#BB86FC";
@@ -159,7 +160,7 @@ const defaultBoxShadow = {
 };
 
 const title = {
-  color: "#3C4858",
+  color: primaryColor,
   margin: "1.75rem 0 0.875rem",
   textDecoration: "none",
   fontWeight: "700",
