@@ -1,8 +1,8 @@
 [
   {
     "title": "High Noon Jhin",
-    "description": "",
-    "author": "",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non metus at ligula finibus rutrum. Donec sed eros id nunc.",
+    "author": "erri120",
     "game": "skyrim",
     "verified": false,
     "links": {
@@ -29,7 +29,7 @@
     "title": "SKT Jhin",
     "description": "",
     "author": "",
-    "game": "specialedition",
+    "game": "skyrimspecialedition",
     "verified": true,
     "links": {
       "image": "https://1.bp.blogspot.com/--rFCFBTm7js/WUmF3FsJLEI/AAAAAAAAncs/YhUdNYqoqzgo0KD31KPIWk9zD92b0LucwCLcBGAs/s1600/e442c5e6fcf216e8.jpg",
