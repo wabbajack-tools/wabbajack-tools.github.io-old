@@ -10,6 +10,8 @@ import CardHeader from '@material-ui/core/CardHeader';
 import CardActions from '@material-ui/core/CardActions';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import Divider from '@material-ui/core/Divider';
+import Chip from '@material-ui/core/Chip';
 
 import style from './../../assets/js/components/cardGalleryStyle';
 
@@ -45,6 +47,7 @@ export default function CardGallery(props){
     <CardContent>
       <Typography variant="h1" component="h2" className={classes.cardTitle}>{title} by {author}</Typography>
       <Typography variant="body2" className={classes.cardBody}>{description}</Typography>
+      <Divider className={classes.cardDivider}/>
     </CardContent>
     <CardActions>
       <Button size="small" className={classes.cardButton} href={newURL}>

@@ -18,6 +18,10 @@ const cardGalleryStyle = {
     color: '#03DAC6',
     fontSize: '18px'
   },
+  cardDivider: {
+    marginTop: '4px',
+    background: 'rgba(255, 255, 255, 0.15)'
+  },
   cardMedia: {
     width: '100%',
     display: 'inline-flex'
