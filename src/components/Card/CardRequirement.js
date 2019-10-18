@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import { makeStyles }  from '@material-ui/core/styles';
@@ -14,9 +15,11 @@ import styles from './../../assets/js/components/cardRequirementStyle';
 
 const useStyles = makeStyles(styles);
 
+const RouteLink = React.forwardRef((props, ref) => <Link innerRef={ref} {...props}/>);
+
 export default function CardRequirement(props) {
   const classes = useStyles();
-  const { title, image, description, link, linkName } = props;
+  const { title, image, description, link, linkName, isRoute } = props;
   return(
     <Card className={classes.card}>
     <CardActionArea
@@ -34,9 +37,15 @@ export default function CardRequirement(props) {
       </CardContent>
     </CardActionArea>
     <CardActions>
-      <Button size="smalle" className={classes.cardButton} href={link}>
+    {isRoute ? (
+      <Button size="small" className={classes.cardButton} href={link}>
         {linkName}
       </Button>
+      ) : (
+        <Button size="small" className={classes.cardButton} component={RouteLink}>
+          {linkName}
+        </Button>
+      )}
     </CardActions>
   </Card>
   )
@@ -47,5 +56,6 @@ CardRequirement.propTypes = {
   image: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
-  linkName: PropTypes.string.isRequired
+  linkName: PropTypes.string.isRequired,
+  isRoute: PropTypes.bool.isRequired
 }

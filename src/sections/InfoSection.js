@@ -53,7 +53,8 @@ export default function InfoSection(){
             title="A Modlist"
             image=""
             description=""
-            link=""
+            isRoute="true"
+            link="/gallery"
             linkName="Browse"/>
         </Grid>
 
