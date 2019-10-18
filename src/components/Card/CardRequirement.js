@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import { makeStyles }  from '@material-ui/core/styles';
@@ -15,20 +14,22 @@ import styles from './../../assets/js/components/cardRequirementStyle';
 
 const useStyles = makeStyles(styles);
 
-const RouteLink = React.forwardRef((props, ref) => <Link innerRef={ref} {...props}/>);
-
 export default function CardRequirement(props) {
   const classes = useStyles();
   const { title, image, description, link, linkName, isRoute } = props;
+  let imageLink = image;
+  if(image === ""){
+    imageLink = "https://raw.githubusercontent.com/wabbajack-tools/wabbajack/master/Wabbajack/UI/none.jpg";
+  }
   return(
     <Card className={classes.card}>
     <CardActionArea
-      disableTouchRipple={true}
-      disableFocusRipple={true}>
+      disableRipple
+      disableTouchRipple>
       <CardMedia
         component='img'
         className={classes.cardMedia}
-        image={image}
+        image={imageLink}
         title={title}
       />
       <CardContent>
@@ -42,7 +43,7 @@ export default function CardRequirement(props) {
         {linkName}
       </Button>
       ) : (
-        <Button size="small" className={classes.cardButton} component={RouteLink}>
+        <Button size="small" className={classes.cardButton} href={link}>
           {linkName}
         </Button>
       )}
@@ -57,5 +58,5 @@ CardRequirement.propTypes = {
   description: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
   linkName: PropTypes.string.isRequired,
-  isRoute: PropTypes.bool.isRequired
+  isRoute: PropTypes.bool
 }
