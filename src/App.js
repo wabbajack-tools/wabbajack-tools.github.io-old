@@ -4,6 +4,7 @@ import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 
 import Header from './components/Header/Header';
+import Parallax from './components/Extra/Parallax';
 
 import styles from './assets/js/indexStyle';
 
@@ -19,6 +20,7 @@ export default function App() {
         height: 400,
         color: "dark"
       }}/>
+      <Parallax image={require("./assets/img/banner_dark.png")}/>
       <div className={clsx(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
         </div>
