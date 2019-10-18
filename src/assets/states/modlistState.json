@@ -1,7 +1,7 @@
 [
   {
     "title": "High Noon Jhin",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non metus at ligula finibus rutrum. Donec sed eros id nunc.",
+    "description": "They call me mad. All artists are mad.",
     "author": "erri120",
     "game": "skyrim",
     "official": false,
@@ -14,8 +14,8 @@
   },
   {
     "title": "Blood Moon Jhin",
-    "description": "",
-    "author": "",
+    "description": "This stage is beneath my talent, but I shall elevate it.",
+    "author": "erri120",
     "game": "oblivion",
     "official": false,
     "links": {
@@ -27,8 +27,8 @@
   },
   {
     "title": "SKT Jhin",
-    "description": "",
-    "author": "",
+    "description": "They’re puppets. I pull their strings, and then they dance.",
+    "author": "erri120",
     "game": "skyrimspecialedition",
     "official": true,
     "links": {
@@ -40,8 +40,8 @@
   },
   {
     "title": "Project Jhin",
-    "description": "",
-    "author": "",
+    "description": "No matter how far we go, we end up here. Beasts raging beneath the framework. Snapping at the cage. One instinct, one command: HUNT",
+    "author": "erri120",
     "game": "fallout4",
     "official": true,
     "links": {
@@ -53,8 +53,8 @@
   },
   {
     "title": "Dark Cosmic Jhin",
-    "description": "",
-    "author": "",
+    "description": "This is the providence, of god.",
+    "author": "erri120",
     "game": "morrowind",
     "official": true,
     "links": {
