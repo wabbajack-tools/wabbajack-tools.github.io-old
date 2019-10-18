@@ -18,7 +18,7 @@ const useStyles = makeStyles(style);
 export default function CardGallery(props){
   const classes = useStyles();
   const { modlist } = props;
-  const { title, author, description, links, game, verified } = modlist;
+  const { title, author, description, links, game, official } = modlist;
   const { image, machineURL } = links;
   let gameName = game;
   switch (game){

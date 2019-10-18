@@ -10,7 +10,7 @@ const useStyles = makeStyles(styles);
 
 export default function ModlistInfo(props){
   const classes = useStyles();
-  const { name, description, author, game, verified, links } = props;
+  const { name, description, author, game, official, links } = props;
   const { image, readme, download, machine } = links;
   return(<div></div>);
 }
@@ -20,6 +20,6 @@ ModlistInfo.propTypes = {
   description: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   game: PropTypes.string.isRequired,
-  verified: PropTypes.bool,
+  official: PropTypes.bool,
   links: PropTypes.array
 }
