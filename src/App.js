@@ -15,12 +15,12 @@ export default function App() {
   return (
     <div>
     <Header
-      color="transparent"
+      color="transparent" // can change to dark
       changeColorOnScroll={{
         height: 400,
-        color: "dark"
+        color: "dark" // can change to transparent
       }}/>
-      <Parallax image={require("./assets/img/banner_dark.png")}/>
+      <Parallax /*filter*/ image={require("./assets/img/banner_dark.png")}/>
       <div className={clsx(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
         </div>
