@@ -16,7 +16,8 @@ const infoStyle = {
     ...title,
     textDecoration: 'none',
     minHeight: '28px',
-    marginTop: '26'
+    marginTop: '26',
+    color: '#03DAC6'
   },
   description: {
     ...defaultFont,
