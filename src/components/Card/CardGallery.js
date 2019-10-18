@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import uuid from 'uuid';
 
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -36,8 +37,8 @@ export default function CardGallery(props){
     {/*<CardHeader
       disableTypography={true}
       className={classes.classHeader}
-    subheader={gameName}/>*/}
-    <span className={classes.classHeader}>{gameName}</span>
+    subheader={gameName}/>
+    <span className={classes.classHeader}>{gameName}</span>*/}
     <CardMedia
       component='img'
       className={classes.cardMedia}
@@ -48,6 +49,21 @@ export default function CardGallery(props){
       <Typography variant="h1" component="h2" className={classes.cardTitle}>{title} by {author}</Typography>
       <Typography variant="body2" className={classes.cardBody}>{description}</Typography>
       <Divider className={classes.cardDivider}/>
+      <div className={classes.cardChipContainer}>
+        <Chip
+          key={uuid.v4}
+          label={gameName}
+          className={classes.cardChip}
+          size="small"
+          />
+        {official ?
+          <Chip
+            key={uuid.v4}
+            label="Official"
+            className={classes.cardChip}
+            size="small"/>
+          : (<React.Fragment/>)}
+      </div>
     </CardContent>
     <CardActions>
       <Button size="small" className={classes.cardButton} href={newURL}>

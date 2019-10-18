@@ -19,8 +19,18 @@ const cardGalleryStyle = {
     fontSize: '18px'
   },
   cardDivider: {
-    marginTop: '4px',
+    marginTop: '10px',
     background: 'rgba(255, 255, 255, 0.15)'
+  },
+  cardChipContainer: {
+    marginTop: '10px',
+    display: "flex"
+  },
+  cardChip: {
+    //background: '#C7FC86',
+    background: '#3700B3',
+    color: 'white',
+    marginLeft: '4px'
   },
   cardMedia: {
     width: '100%',
