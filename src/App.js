@@ -30,8 +30,8 @@ export default function App() {
       <Parallax /*filter*/ image={require("./assets/img/banner_dark.png")}/>
       <div className={clsx(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
-        <Route exact path="/" component={InfoSection}/>
-        <Route path="/gallery" component={ModlistGallery}/>
+        <Route exact path="/" render={(props) => (<InfoSection/>)}/>
+        <Route path="/gallery" render={(props) => (<ModlistGallery/>)}/>
         </div>
       </div>
     </div>
