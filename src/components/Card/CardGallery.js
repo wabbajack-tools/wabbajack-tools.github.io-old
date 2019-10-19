@@ -51,14 +51,14 @@ export default function CardGallery(props){
       <Divider className={classes.cardDivider}/>
       <div className={classes.cardChipContainer}>
         <Chip
-          key={uuid.v4}
+          key={uuid.v4()}
           label={gameName}
           className={classes.cardChip}
           size="small"
           />
         {official ?
           <Chip
-            key={uuid.v4}
+            key={uuid.v4()}
             label="Official"
             className={classes.cardChip}
             size="small"/>
