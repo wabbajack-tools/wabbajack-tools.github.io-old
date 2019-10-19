@@ -10,7 +10,9 @@ import Chip from '@material-ui/core/Chip';
 import Divider from '@material-ui/core/Divider';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+
 import GetAppIcon from '@material-ui/icons/GetApp';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
 import styles from './../assets/js/sections/modlistInfoStyle';
 
@@ -49,6 +51,7 @@ export default function ModlistInfo(props){
   }
   return(
     <div className={classes.section}>
+    <Button href="/gallery" className={classes.backButton} size="small" startIcon={<ArrowBackIcon/>} variant="outlined">Back to Gallery</Button>
     <h2 className={classes.title}>{title}</h2>
     <img src={image} className={classes.image} alt={uuid.v4()}/>
     <Typography variant="caption">Created by {author}</Typography>

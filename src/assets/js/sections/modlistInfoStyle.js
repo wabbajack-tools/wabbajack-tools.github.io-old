@@ -48,10 +48,14 @@ const modlistInfoStyle = {
   },
   buttons: {
     marginTop: '10px',
-    display: "flex"
+    display: 'flex'
   },
   button: {
     background: '#C7FC86'
+  },
+  backButton: {
+    color: 'white',
+    float: 'right!important'
   }
 }
 
