@@ -3,7 +3,6 @@ import clsx from 'clsx';
 import axios from 'axios';
 import uuid from 'uuid';
 import Markdown from 'markdown-to-jsx';
-import PropTypes from 'prop-types';
 
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -46,11 +45,12 @@ export default function ModlistInfo(props){
     case 'skyrimspecialedition': gameName = 'Skyrim Special Edition'; break;
     case 'fallout4': gameName = 'Fallout 4'; break;
     case 'morrowind': gameName = 'Morrowind'; break;
+    default: gameName = 'UNKNOWN'; break;
   }
   return(
     <div className={classes.section}>
     <h2 className={classes.title}>{title}</h2>
-    <img src={image} className={classes.image}/>
+    <img src={image} className={classes.image} alt={uuid.v4()}/>
     <Typography variant="caption">Created by {author}</Typography>
     <div className={classes.chips}>
         <Chip

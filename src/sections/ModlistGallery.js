@@ -1,5 +1,4 @@
 import React from 'react';
-import clsx from 'clsx';
 import axios from 'axios';
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -34,7 +33,6 @@ export default function ModlistGallery() {
         alignItems="center">
 
         {_.map(modlists, (modlist) => {
-          {console.log(modlist)}
           return (
             <Grid item xs={12} sm={12} md={5}>
               <CardGallery modlist={modlist}/>

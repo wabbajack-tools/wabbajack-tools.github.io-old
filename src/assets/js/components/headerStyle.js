@@ -1,4 +1,4 @@
-import { container, defaultFont, transition, elevation16 } from './../globalStyle';
+import { container, defaultFont, elevation16 } from './../globalStyle';
 
 const headerStlye = {
   appBar: {

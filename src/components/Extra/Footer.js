@@ -1,6 +1,4 @@
 import React from 'react';
-import clsx from 'clsx';
-import uuid from 'uuid';
 
 import { makeStyles } from '@material-ui/core/styles';
 

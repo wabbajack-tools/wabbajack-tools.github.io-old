@@ -1,4 +1,4 @@
-import { title, defaultFont } from '../globalStyle';
+import { title } from '../globalStyle';
 
 const modlistInfoStyle = {
   section: {
