@@ -72,6 +72,31 @@ export default function ModlistInfo(props){
       <div>
       <Markdown
           children={readmeMD}
+          options={{
+            overrides: {
+              h2: {
+                component: Typography,
+                props: {
+                  className: `${classes.mdTitle}`,
+                  variant: 'h4'
+                }
+              },
+              h3: {
+                component: Typography,
+                props: {
+                  className: `${clsx(classes.mdTitle, classes.mdTitleh3)}`,
+                  variant: 'h5'
+                }
+              },
+              h4: {
+                component: Typography,
+                props: {
+                  classname: `${clsx(classes.mdTitle, classes.mdTitleh4)}`,
+                  variant: 'h6'
+                }
+              }
+            }
+          }}
           />
       </div>
     </div>

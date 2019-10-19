@@ -33,6 +33,18 @@ const modlistInfoStyle = {
     background: '#3700B3',
     color: 'white',
     marginLeft: '4px'
+  },
+  mdTitle: {
+    ...title,
+    color: 'white',
+    marginTop: '20px',
+    fontSize: '24px'
+  },
+  mdTitleh3: {
+    fontSize: '22px'
+  },
+  mdTitleh4: {
+    fontSize: '20px'
   }
 }
 
