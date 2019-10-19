@@ -7,6 +7,7 @@ import { makeStyles } from '@material-ui/core/styles';
 // Components
 import Header from './components/Header/Header';
 import Parallax from './components/Extra/Parallax';
+import Footer from './components/Extra/Footer';
 
 // Sections
 import InfoSection from './sections/InfoSection';
@@ -36,6 +37,7 @@ export default function App() {
         <Route path="/modlist/:url" render={(props) => (<ModlistInfo {...props}/>)}/>
         </div>
       </div>
+      <Footer/>
     </div>
     </Router>
   );
