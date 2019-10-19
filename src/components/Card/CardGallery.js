@@ -75,5 +75,5 @@ export default function CardGallery(props){
 }
 
 CardGallery.propTypes = {
-  modlist: PropTypes.array.isRequired
+  modlist: PropTypes.object.isRequired
 }

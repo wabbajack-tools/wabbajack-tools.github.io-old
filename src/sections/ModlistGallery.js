@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import uuid from 'uuid';
 
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -34,7 +35,7 @@ export default function ModlistGallery() {
 
         {_.map(modlists, (modlist) => {
           return (
-            <Grid item xs={12} sm={12} md={5}>
+            <Grid item xs={12} sm={12} md={5} key={uuid.v4()}>
               <CardGallery modlist={modlist}/>
             </Grid>
           );
