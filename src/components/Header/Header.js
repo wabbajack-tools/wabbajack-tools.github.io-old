@@ -50,7 +50,7 @@ export default function Header(props){
   return (
     <AppBar className={appBarClasses}>
     <ToolBar className={classes.container}>
-      <Button className={classes.title}>Wabbajack</Button>
+      <Button className={classes.title} href="/">Wabbajack</Button>
     </ToolBar>
     </AppBar>
   )
