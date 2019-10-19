@@ -11,6 +11,7 @@ import Parallax from './components/Extra/Parallax';
 // Sections
 import InfoSection from './sections/InfoSection';
 import ModlistGallery from './sections/ModlistGallery';
+import ModlistInfo from './sections/ModlistInfo';
 
 import styles from './assets/js/indexStyle';
 
@@ -32,6 +33,7 @@ export default function App() {
         <div className={classes.container}>
         <Route exact path="/" render={(props) => (<InfoSection/>)}/>
         <Route path="/gallery" render={(props) => (<ModlistGallery/>)}/>
+        <Route path="/modlist/:url" render={(props) => (<ModlistInfo {...props}/>)}/>
         </div>
       </div>
     </div>

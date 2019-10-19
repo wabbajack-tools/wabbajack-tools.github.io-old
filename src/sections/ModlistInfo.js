@@ -1,5 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
+import axios from 'axios';
 import PropTypes from 'prop-types';
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -7,19 +8,26 @@ import { makeStyles } from '@material-ui/core/styles';
 import styles from './../assets/js/sections/modlistInfoStyle';
 
 const useStyles = makeStyles(styles);
+const _ = require('underscore');
 
 export default function ModlistInfo(props){
   const classes = useStyles();
-  const { name, description, author, game, official, links } = props;
-  const { image, readme, download, machine } = links;
-  return(<div></div>);
-}
-
-ModlistInfo.propTypes = {
-  name: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
-  game: PropTypes.string.isRequired,
-  official: PropTypes.bool,
-  links: PropTypes.array
+  const machineURL = props.match.params.url;
+  let modlists = {};
+  if (process.env.NODE_ENV === "production"){
+    axios
+      .get('https://raw.githubusercontent.com/wabbajack-tools/wabbajack-tools.github.io/code/src/assets/states/modlistState.json')
+      .then(res => {modlists = res.data});
+  }else{
+    modlists = require('./../assets/states/modlistState.json');
+  }
+  const modlist = _.findWhere(modlists, (current) => {
+    return current.links.machineURL === machineURL
+  });
+  const { name, description, author, game, official, links } = modlist;
+  const { image, readme, download } = links;
+  return(
+    <div>
+    </div>
+  );
 }
