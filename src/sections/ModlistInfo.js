@@ -10,6 +10,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Chip from '@material-ui/core/Chip';
 import Divider from '@material-ui/core/Divider';
 import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import GetAppIcon from '@material-ui/icons/GetApp';
 
 import styles from './../assets/js/sections/modlistInfoStyle';
 
@@ -98,6 +100,10 @@ export default function ModlistInfo(props){
             }
           }}
           />
+      </div>
+      <Divider className={classes.divider}/>
+      <div className={classes.buttons}>
+          <Button href={download} className={classes.button} size="small" startIcon={<GetAppIcon/>} variant="contained">Download</Button>
       </div>
     </div>
   );

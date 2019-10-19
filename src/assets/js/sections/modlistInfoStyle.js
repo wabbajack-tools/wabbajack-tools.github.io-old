@@ -45,6 +45,13 @@ const modlistInfoStyle = {
   },
   mdTitleh4: {
     fontSize: '20px'
+  },
+  buttons: {
+    marginTop: '10px',
+    display: "flex"
+  },
+  button: {
+    background: '#C7FC86'
   }
 }
 
