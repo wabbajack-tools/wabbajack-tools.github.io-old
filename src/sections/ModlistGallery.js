@@ -22,6 +22,7 @@ const _ = require('underscore');
 
 export default function ModlistGallery() {
   const classes = useStyles();
+  let gamesCache = [];
   const [values, setValues] = React.useState({
     game: ''
   });
@@ -54,9 +55,12 @@ export default function ModlistGallery() {
           }}>
           <MenuItem value="">All</MenuItem>
           {_.map(modlists, (modlist) => {
-            return (
-              <MenuItem value={modlist.game}>{getGameName(modlist.game)}</MenuItem>
-            )
+            if(!gamesCache.includes(modlist.game)){
+              gamesCache.push(modlist.game);
+              return (
+                <MenuItem value={modlist.game}>{getGameName(modlist.game)}</MenuItem>
+              );
+            }
           })}
         </Select>
         <FormHelperText className={classes.formControlText}>Filter by game</FormHelperText>
