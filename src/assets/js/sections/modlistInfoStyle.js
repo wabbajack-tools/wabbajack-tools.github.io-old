@@ -56,6 +56,9 @@ const modlistInfoStyle = {
   backButton: {
     color: 'white',
     float: 'right!important'
+  },
+  link: {
+    color: '#BB86FC'
   }
 }
 

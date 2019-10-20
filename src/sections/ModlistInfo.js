@@ -72,6 +72,13 @@ export default function ModlistInfo(props){
           children={readmeMD}
           options={{
             overrides: {
+              h1: {
+                component: Typography,
+                props: {
+                  className: `${classes.mdTitle}`,
+                  variant: 'h3'
+                }
+              },
               h2: {
                 component: Typography,
                 props: {
@@ -89,8 +96,16 @@ export default function ModlistInfo(props){
               h4: {
                 component: Typography,
                 props: {
-                  classname: `${clsx(classes.mdTitle, classes.mdTitleh4)}`,
+                  className: `${clsx(classes.mdTitle, classes.mdTitleh4)}`,
                   variant: 'h6'
+                }
+              },
+              p: {
+                component: Typography
+              },
+              a: {
+                props: {
+                  className: `${classes.link}`
                 }
               }
             }
