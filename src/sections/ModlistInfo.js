@@ -36,7 +36,7 @@ export default function ModlistInfo(props){
   const modlist = _.find(modlists, (current) => {
     return current.links.machineURL === machineURL
   });
-  const { title, description, author, game, official, links } = modlist;
+  const { title, description, author, game, official, links, version } = modlist;
   const { image, readme, download } = links;
   axios.get(readme)
   .then(res => {
@@ -47,7 +47,7 @@ export default function ModlistInfo(props){
     <Button href="/gallery" className={classes.backButton} size="small" startIcon={<ArrowBackIcon/>} variant="outlined">Back to Gallery</Button>
     <h2 className={classes.title}>{title}</h2>
     <img src={image} className={classes.image} alt={uuid.v4()}/>
-    <Typography variant="caption">Created by {author}</Typography>
+    <Typography variant="caption">Created by {author}, current version: {version}</Typography>
     <div className={classes.chips}>
         <Chip
           key={uuid.v4()}
