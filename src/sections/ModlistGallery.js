@@ -74,7 +74,7 @@ export default function ModlistGallery() {
         alignItems="center">
 
         {_.map(modlists, (modlist) => {
-          if(modlist.game == values.game || values.game == "")
+          if(modlist.game === values.game || values.game === "")
             return (
               <Grid item xs={12} sm={12} md={5} key={uuid.v4()}>
                 <CardGallery modlist={modlist}/>
