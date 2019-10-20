@@ -51,7 +51,7 @@ export default function InfoSection(){
         <Grid item xs>
           <CardRequirement
             title="A Modlist"
-            image=""
+            image="https://raw.githubusercontent.com/wabbajack-tools/wabbajack-tools.github.io/code/src/assets/img/modlist_gallery-preview.png"
             description=""
             isRoute={true}
             link="/gallery"
