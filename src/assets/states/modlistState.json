@@ -3,6 +3,7 @@
     "title": "High Noon Jhin",
     "description": "They call me mad. All artists are mad.",
     "author": "erri120",
+    "version": "1.0.0",
     "game": "skyrim",
     "official": false,
     "links": {
@@ -16,6 +17,7 @@
     "title": "Blood Moon Jhin",
     "description": "This stage is beneath my talent, but I shall elevate it.",
     "author": "erri120",
+    "version": "1.0.0",
     "game": "oblivion",
     "official": false,
     "links": {
@@ -29,6 +31,7 @@
     "title": "SKT Jhin",
     "description": "They’re puppets. I pull their strings, and then they dance.",
     "author": "erri120",
+    "version": "1.0.0",
     "game": "skyrimspecialedition",
     "official": true,
     "links": {
@@ -42,6 +45,7 @@
     "title": "Project Jhin",
     "description": "No matter how far we go, we end up here. Beasts raging beneath the framework. Snapping at the cage. One instinct, one command: HUNT",
     "author": "erri120",
+    "version": "1.0.0",
     "game": "fallout4",
     "official": true,
     "links": {
@@ -55,6 +59,7 @@
     "title": "Dark Cosmic Jhin",
     "description": "This is the providence, of god.",
     "author": "erri120",
+    "version": "1.0.0",
     "game": "morrowind",
     "official": true,
     "links": {
