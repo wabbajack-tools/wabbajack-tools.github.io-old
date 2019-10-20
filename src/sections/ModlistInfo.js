@@ -4,6 +4,8 @@ import axios from 'axios';
 import uuid from 'uuid';
 import Markdown from 'markdown-to-jsx';
 
+import { getGameName } from './../utils/Games';
+
 import { makeStyles } from '@material-ui/core/styles';
 
 import Chip from '@material-ui/core/Chip';
@@ -40,15 +42,6 @@ export default function ModlistInfo(props){
   .then(res => {
     setReadmeMD(res.data);
   });
-  let gameName = game;
-  switch (game){
-    case 'skyrim': gameName = 'Skyrim'; break;
-    case 'oblivion': gameName = 'Oblivion'; break;
-    case 'skyrimspecialedition': gameName = 'Skyrim Special Edition'; break;
-    case 'fallout4': gameName = 'Fallout 4'; break;
-    case 'morrowind': gameName = 'Morrowind'; break;
-    default: gameName = 'UNKNOWN'; break;
-  }
   return(
     <div className={classes.section}>
     <Button href="/gallery" className={classes.backButton} size="small" startIcon={<ArrowBackIcon/>} variant="outlined">Back to Gallery</Button>
@@ -58,7 +51,7 @@ export default function ModlistInfo(props){
     <div className={classes.chips}>
         <Chip
           key={uuid.v4()}
-          label={gameName}
+          label={getGameName(game)}
           className={classes.chip}
           size="small"
           />

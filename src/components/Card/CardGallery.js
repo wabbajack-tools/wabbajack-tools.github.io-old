@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import uuid from 'uuid';
 
+import { getGameName } from './../../utils/Games';
+
 import { makeStyles } from '@material-ui/core/styles';
 
 import Card from '@material-ui/core/Card';
@@ -22,15 +24,6 @@ export default function CardGallery(props){
   const { modlist } = props;
   const { title, author, description, links, game, official } = modlist;
   const { image, machineURL } = links;
-  let gameName = game;
-  switch (game){
-    case 'skyrim': gameName = 'Skyrim'; break;
-    case 'oblivion': gameName = 'Oblivion'; break;
-    case 'skyrimspecialedition': gameName = 'Skyrim Special Edition'; break;
-    case 'fallout4': gameName = 'Fallout 4'; break;
-    case 'morrowind': gameName = 'Morrowind'; break;
-    default: gameName = 'UNKNOWN'; break;
-  }
   let newURL = "modlist/"+machineURL;
   return(
     <Card className={classes.card}>
@@ -52,7 +45,7 @@ export default function CardGallery(props){
       <div className={classes.cardChipContainer}>
         <Chip
           key={uuid.v4()}
-          label={gameName}
+          label={getGameName(game)}
           className={classes.cardChip}
           size="small"
           />
