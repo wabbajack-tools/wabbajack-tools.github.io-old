@@ -14,6 +14,24 @@ const modlistGalleryStyle = {
   },
   left: {
     textAlign: 'left'
+  },
+  searchOptions: {
+    marginRight: '32pt',
+    marginLeft: '32pt'
+  },
+  formControl: {
+    float: 'right!important'
+  },
+  formControlText: {
+    color: 'white'
+  },
+  select: {
+    width: '240px',
+    color: 'black',
+    //background: '#C7FC86',
+    background: 'white',
+    textAlign: 'left',
+    paddingLeft: '10px'
   }
 }
 
