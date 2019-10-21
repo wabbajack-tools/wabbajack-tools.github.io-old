@@ -111,8 +111,6 @@ export default function InfoSection(){
       <h3 className={classes.titleSecond}>Documentation</h3>
       <Typography variant="body1">The official documentation is available <a
         href="/docs"
-        target="_blank"
-        rel="noopener noreferrer"
         className={classes.link}>
          here
       </a>
