@@ -26,13 +26,9 @@ export default function ModlistInfo(props){
   const machineURL = props.match.params.url;
   let modlists = {};
   const [readmeMD, setReadmeMD] = useState("NOTFOUND");
-  if (process.env.NODE_ENV === "production"){
-    axios
-      .get('https://raw.githubusercontent.com/wabbajack-tools/wabbajack-tools.github.io/code/src/assets/states/modlistState.json')
-      .then(res => {modlists = res.data});
-  }else{
-    modlists = require('./../assets/states/modlistState.json');
-  }
+  axios
+    .get('https://raw.githubusercontent.com/wabbajack-tools/mod-lists/master/modlists.json')
+    .then(res => {modlists = res.data});
   const modlist = _.find(modlists, (current) => {
     return current.links.machineURL === machineURL
   });

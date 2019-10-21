@@ -33,13 +33,9 @@ export default function ModlistGallery() {
     }));
   }
   let modlists = {};
-  if (process.env.NODE_ENV === "production"){
-    axios
-      .get('https://raw.githubusercontent.com/wabbajack-tools/wabbajack-tools.github.io/code/src/assets/states/modlistState.json')
-      .then(res => {modlists = res.data});
-  }else{
-    modlists = require('./../assets/states/modlistState.json');
-  }
+  axios
+    .get('https://raw.githubusercontent.com/wabbajack-tools/mod-lists/master/modlists.json')
+    .then(res => {modlists = res.data});
   return(
     <div className={classes.section}>
       <h2 className={classes.title}>Featured Modlists</h2>
