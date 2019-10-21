@@ -1,4 +1,4 @@
-import { title, defaultFont } from '../globalStyle';
+import { title, defaultFont, primaryColor } from '../globalStyle';
 
 const infoStyle = {
   section: {
@@ -28,6 +28,9 @@ const infoStyle = {
   },
   left: {
     textAlign: 'left'
+  },
+  link: {
+    color: primaryColor
   }
 }
 

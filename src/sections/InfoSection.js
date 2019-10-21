@@ -5,6 +5,8 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import Grid from '@material-ui/core/Grid';
 
+import Typography from '@material-ui/core/Typography';
+
 import CardRequirement from './../components/Card/CardRequirement';
 
 import styles from './../assets/js/sections/infoStyle';
@@ -105,6 +107,24 @@ export default function InfoSection(){
             linkName="Visit"/>
         </Grid>
       </Grid>
+      <div>
+      <h3 className={classes.titleSecond}>Documentation</h3>
+      <Typography variant="body1">The official documentation is available <a
+        href="/docs"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={classes.link}>
+         here
+      </a>
+      . For the latest updates and news check out our <a
+        href="https://discord.gg/zgbrkmA"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={classes.link}>
+        Discord
+      </a>
+      .</Typography>
+      </div>
     </div>
   )
 }
