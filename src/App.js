@@ -13,6 +13,7 @@ import Footer from './components/Extra/Footer';
 import InfoSection from './sections/InfoSection';
 import ModlistGallery from './sections/ModlistGallery';
 import ModlistInfo from './sections/ModlistInfo';
+import DocsSection from './sections/DocsSection';
 
 import styles from './assets/js/indexStyle';
 
@@ -35,6 +36,8 @@ export default function App() {
         <Route exact path="/" render={(props) => (<InfoSection/>)}/>
         <Route path="/gallery" render={(props) => (<ModlistGallery/>)}/>
         <Route path="/modlist/:url" render={(props) => (<ModlistInfo {...props}/>)}/>
+        <Route path="/docs" render={(props) => (<DocsSection/>)}/>
+        <Route path="/docs/:page" render={(props) => (<React.Fragment {...props}/>)}/>
         </div>
       </div>
       <Footer/>
