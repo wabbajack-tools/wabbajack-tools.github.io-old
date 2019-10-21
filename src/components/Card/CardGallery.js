@@ -25,6 +25,10 @@ export default function CardGallery(props){
   const { title, author, description, links, game, official } = modlist;
   const { image, machineURL } = links;
   let newURL = "modlist/"+machineURL;
+  let newImage = image;
+  if(image === ""){
+    newImage = "https://raw.githubusercontent.com/wabbajack-tools/wabbajack/master/Wabbajack/UI/none.jpg";
+  }
   return(
     <Card className={classes.card}>
     {/*<CardHeader
@@ -35,7 +39,7 @@ export default function CardGallery(props){
     <CardMedia
       component='img'
       className={classes.cardMedia}
-      image={image}
+      image={newImage}
       title={title}
       />
     <CardContent>
