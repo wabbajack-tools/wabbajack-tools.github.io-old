@@ -1,4 +1,4 @@
-let getGameName = (game) =>{
+const getGameName = (game) =>{
   let gameName = '';
   switch (game){
     case 'skyrim': gameName = 'Skyrim'; break;
