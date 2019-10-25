@@ -1,5 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { ConnectedRouter } from 'connected-react-router';
+import PropTypes from 'prop-types';
+import { Provider } from 'react-redux';
 import clsx from 'clsx';
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -20,9 +23,12 @@ import styles from './assets/js/indexStyle';
 
 const useStyles = makeStyles(styles);
 
-export default function App() {
+export default function App(props) {
+  const { store, history } = props;
   const classes = useStyles();
   return (
+    <Provider store={store}>
+    <ConnectedRouter history={history}>
     <Router>
     <div>
     <Header
@@ -38,12 +44,18 @@ export default function App() {
         <Route path="/gallery" render={(props) => (<ModlistGallery/>)}/>
         <Route path="/modlist/:url" render={(props) => (<ModlistInfo {...props}/>)}/>
         <Route exact path="/docs" render={(props) => (<DocsSection/>)}/>
-        <Route path="/docs/:page" render={(props) => (<DocsPage {...props}/>)}/>
+    <Route path="/docs/:page" render={(props) => (<DocsPage {...props}/>)}/>
         </div>
       </div>
       <Footer/>
     </div>
     </Router>
+    </ConnectedRouter>
+    </Provider>
   );
 }
 
+App.propTypes = {
+  store: PropTypes.object.isRequired,
+  history: PropTypes.object
+}
