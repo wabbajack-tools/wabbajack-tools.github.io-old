@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.7ecb2c68.chunk.css",
-    "main.js": "/static/js/main.0f74cd11.chunk.js",
-    "main.js.map": "/static/js/main.0f74cd11.chunk.js.map",
+    "main.js": "/static/js/main.528a98cb.chunk.js",
+    "main.js.map": "/static/js/main.528a98cb.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.5778a745.js",
     "runtime-main.js.map": "/static/js/runtime-main.5778a745.js.map",
     "static/js/2.846ecea1.chunk.js": "/static/js/2.846ecea1.chunk.js",
     "static/js/2.846ecea1.chunk.js.map": "/static/js/2.846ecea1.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.964b366e7c8cae30f2a06f30afdefe6c.js": "/precache-manifest.964b366e7c8cae30f2a06f30afdefe6c.js",
+    "precache-manifest.5649e04147b9b10504165b339018c48a.js": "/precache-manifest.5649e04147b9b10504165b339018c48a.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.7ecb2c68.chunk.css.map": "/static/css/main.7ecb2c68.chunk.css.map",
     "static/media/banner_dark.png": "/static/media/banner_dark.35bb25a3.png"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.5778a745.js",
     "static/js/2.846ecea1.chunk.js",
     "static/css/main.7ecb2c68.chunk.css",
-    "static/js/main.0f74cd11.chunk.js"
+    "static/js/main.528a98cb.chunk.js"
   ]
 }
