@@ -28,8 +28,11 @@ export default function DocsSection(){
         <ListItemText>FAQ</ListItemText>
       </ListItemLink>
       <ListItemLink href="/docs/guide" key={uuid.v4()}>
-      <ListItemText>Guides</ListItemText>
-    </ListItemLink>
+        <ListItemText>Guides</ListItemText>
+      </ListItemLink>
+      <ListItemLink href="/docs/changelog" key={uuid.v4()}>
+        <ListItemText>Changelog</ListItemText>
+      </ListItemLink>
     </div>
     <Divider className={classes.divider}/>
     </div>
