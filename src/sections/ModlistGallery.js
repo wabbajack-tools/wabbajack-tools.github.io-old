@@ -23,7 +23,8 @@ import underscore from 'underscore';
 
 class ModlistGallery extends Component {
   componentDidMount() {
-    this.props.fetchModlists();
+    if(this.props.modlists.length === 0)
+      this.props.fetchModlists();
   }
 
   componentDidUpdate(prevProps){
