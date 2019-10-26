@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import uuid from 'uuid';
 import PropTypes from 'prop-types';
+
+import { connect } from 'react-redux';
+import { fetchModlists, setSelectedGame, setSelectionGames } from './../actions/modlistsAction';
 
 import { getGameName } from './../utils/Games';
 
 import { withStyles } from '@material-ui/core/styles';
 
 import Grid from '@material-ui/core/Grid';
-
 import FormControl from '@material-ui/core/FormControl';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -21,30 +22,24 @@ import style from './../assets/js/sections/modlistGalleryStyle';
 import underscore from 'underscore';
 
 class ModlistGallery extends Component {
-  state = {
-    modlists: [],
-    game: '',
-    gamesCache: []
-  };
-
   componentDidMount() {
-    axios
-    .get('https://raw.githubusercontent.com/wabbajack-tools/mod-lists/master/modlists.json')
-    .then(res => {
-      this.setState({modlists: res.data}, () => {
-        let templist = [];
-        underscore.map(this.state.modlists, (modlist) => {
-          if(!templist.includes(modlist.game)){
-            templist.push(modlist.game);
-          }
-        });
-        this.setState({gamesCache: templist});
+    this.props.fetchModlists();
+  }
+
+  componentDidUpdate(prevProps){
+    if(prevProps.modlists !== this.props.modlists){
+      let templist = [];
+      underscore.map(this.props.modlists, (modlist) => {
+        if(!templist.includes(modlist.game))
+          templist.push(modlist.game);
       });
-    });
+      this.props.setSelectionGames(templist);
+      this.props.setSelectedGame("");
+    }
   }
 
   handleChange = event => {
-    this.setState({game: event.target.value});
+    this.props.setSelectedGame(event.target.value);
   }
 
   render(){
@@ -56,21 +51,21 @@ class ModlistGallery extends Component {
       <FormControl className={classes.formControl}>
         <Select
           className={classes.select}
-          value={this.state.game}
+          value={this.props.selectedGame}
           onChange={this.handleChange}
           inputProps={{
             name: 'game',
             id: 'select-game'
           }}>
           <MenuItem value="">All</MenuItem>
-          {underscore.map(this.state.gamesCache, (gameInCache) => {
+          {underscore.map(this.props.selectionGames, (gameInCache) => {
             return(
               <MenuItem value={gameInCache} key={uuid.v4()}>{getGameName(gameInCache)}</MenuItem>
             );
           })}
         </Select>
         <FormHelperText className={classes.formControlText}>Filter by game</FormHelperText>
-      </FormControl>
+        </FormControl>
       </div>
       <Grid
         container
@@ -79,13 +74,14 @@ class ModlistGallery extends Component {
         justify="space-around"
         alignItems="center">
 
-        {underscore.map(this.state.modlists, (modlist) => {
-          if(modlist.game === this.state.game || this.state.game === "")
+        {underscore.map(this.props.modlists, (modlist) => {
+          if(modlist.game === this.props.selectedGame || this.props.selectedGame === ""){
           return (
             <Grid item xs={12} sm={12} md={5} key={uuid.v4()}>
               <CardGallery modlist={modlist}/>
             </Grid>
           );
+          }
         })}
       </Grid>
     </div>
@@ -94,7 +90,16 @@ class ModlistGallery extends Component {
 }
 
 ModlistGallery.propTypes = {
-  classes: PropTypes.object.isRequired
-}
+  classes: PropTypes.object.isRequired,
+  fetchModlists: PropTypes.func.isRequired,
+  setSelectedGame: PropTypes.func.isRequired,
+  setSelectionGames: PropTypes.func.isRequired
+};
 
-export default withStyles(style)(ModlistGallery);
+const mapStateToProps = state => ({
+  modlists: state.modlists.items,
+  selectedGame: state.modlists.game,
+  selectionGames: state.modlists.games
+});
+
+export default connect(mapStateToProps, { fetchModlists, setSelectedGame, setSelectionGames })(withStyles(style)(ModlistGallery));

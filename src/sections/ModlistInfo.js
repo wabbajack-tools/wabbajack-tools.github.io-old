@@ -24,20 +24,25 @@ const _ = require('underscore');
 export default function ModlistInfo(props){
   const classes = useStyles();
   const machineURL = props.match.params.url;
-  let modlists = {};
+  const [modlist, setModlist] = useState({});
   const [readmeMD, setReadmeMD] = useState("NOTFOUND");
   axios
     .get('https://raw.githubusercontent.com/wabbajack-tools/mod-lists/master/modlists.json')
-    .then(res => {modlists = res.data});
+    .then(res => {
+      setModlist(res.data);
+    });
   const modlist = _.find(modlists, (current) => {
     return current.links.machineURL === machineURL
   });
   const { title, description, author, game, official, links, version } = modlist;
   const { image, readme, download } = links;
   axios.get(readme)
-  .then(res => {
-    setReadmeMD(res.data);
-  });
+    .then(res => {
+      setReadmeMD(res.data);
+    })
+    .catch(error => {
+      console.log(error);
+    });
   return(
     <div className={classes.section}>
     <Button href="/gallery" className={classes.backButton} size="small" startIcon={<ArrowBackIcon/>} variant="outlined">Back to Gallery</Button>
