@@ -53,7 +53,9 @@ class ModlistInfo extends Component{
     <div className={classes.section}>
     <Button href="/gallery" className={classes.backButton} size="small" startIcon={<ArrowBackIcon/>} variant="outlined">Back to Gallery</Button>
     <h2 className={classes.title}>{this.props.modlist.title}</h2>
+    {this.props.modlist.links.image !== "" ?
     <img src={this.props.modlist.links.image} className={classes.image} alt={uuid.v4()}/>
+    : (<React.Fragment/>)}
     <Typography variant="caption">Created by {this.props.modlist.author}, current version: {this.props.modlist.version}</Typography>
     <div className={classes.chips}>
         <Chip
