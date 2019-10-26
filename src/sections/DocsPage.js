@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import clsx from 'clsx';
-import axios from 'axios';
-import uuid from 'uuid';
 import Markdown from 'markdown-to-jsx';
 import PropTypes from 'prop-types';
 
