@@ -116,6 +116,11 @@ class ModlistInfo extends Component{
                 props: {
                   className: `${classes.link}`
                 }
+              },
+              img: {
+                props: {
+                  className: `${classes.image}`
+                }
               }
             }
           }}

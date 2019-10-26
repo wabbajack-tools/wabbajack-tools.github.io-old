@@ -19,7 +19,8 @@ const modlistInfoStyle = {
     marginTop: '16px'
   },
   image: {
-    width: '100%'
+    maxWidth: '100%',
+    maxHeight: '100%'
   },
   chips: {
     marginTop: '10px',
