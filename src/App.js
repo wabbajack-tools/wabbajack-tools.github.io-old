@@ -15,7 +15,7 @@ import Footer from './components/Extra/Footer';
 // Sections
 import InfoSection from './sections/InfoSection';
 import ModlistGallery from './sections/ModlistGallery';
-//import ModlistInfo from './sections/ModlistInfo';
+import ModlistInfo from './sections/ModlistInfo';
 import DocsSection from './sections/DocsSection';
 import DocsPage from './sections/DocsPage';
 
@@ -42,7 +42,7 @@ export default function App(props) {
         <div className={classes.container}>
         <Route exact path="/" render={(props) => (<InfoSection/>)}/>
         <Route path="/gallery" render={(props) => (<ModlistGallery/>)}/>
-        {/*<Route path="/modlist/:url" render={(props) => (<ModlistInfo {...props}/>)}/>*/}
+        <Route path="/modlist/:url" render={(props) => (<ModlistInfo {...props}/>)}/>
         <Route exact path="/docs" render={(props) => (<DocsSection/>)}/>
     <Route path="/docs/:page" render={(props) => (<DocsPage {...props}/>)}/>
         </div>
