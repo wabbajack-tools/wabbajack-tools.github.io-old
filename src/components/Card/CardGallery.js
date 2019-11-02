@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import uuid from 'uuid';
+import underscore from 'underscore';
 
 import { getGameName } from './../../utils/Games';
 
@@ -22,7 +23,7 @@ const useStyles = makeStyles(style);
 export default function CardGallery(props){
   const classes = useStyles();
   const { modlist } = props;
-  const { title, author, description, links, game, official } = modlist;
+  const { title, author, description, links, tags, game } = modlist;
   const { image, machineURL } = links;
   let newURL = "modlist/"+machineURL;
   let newImage = image;
@@ -47,19 +48,22 @@ export default function CardGallery(props){
       <Typography variant="body2" className={classes.cardBody}>{description}</Typography>
       <Divider className={classes.cardDivider}/>
       <div className={classes.cardChipContainer}>
-        <Chip
-          key={uuid.v4()}
-          label={getGameName(game)}
-          className={classes.cardChip}
-          size="small"
-          />
-        {official ?
+      <Chip
+        key={uuid.v4()}
+        label={getGameName(game)}
+        className={classes.cardChip}
+        size="small"
+        />
+      {underscore.map(tags, (tag) => {
+        return(
           <Chip
             key={uuid.v4()}
-            label="Official"
+            label={tag}
             className={classes.cardChip}
-            size="small"/>
-          : (<React.Fragment/>)}
+            size="small"
+            />
+        );
+      })}
       </div>
     </CardContent>
     <CardActions>
