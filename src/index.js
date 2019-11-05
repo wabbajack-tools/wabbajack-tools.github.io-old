@@ -10,6 +10,6 @@ const store = configureStore();
 
 ReactDOM.render(<App store={store} history={history}/>, document.getElementById('root'));
 
-if(process.env.NODE_ENV === "production"){
-  serviceWorker.register();
-}
+//if(process.env.NODE_ENV === "production"){
+//  serviceWorker.register();
+//}
