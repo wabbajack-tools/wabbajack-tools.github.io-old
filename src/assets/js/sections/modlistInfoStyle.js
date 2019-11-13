@@ -20,7 +20,8 @@ const modlistInfoStyle = {
   },
   image: {
     maxWidth: '100%',
-    maxHeight: '100%'
+    maxHeight: '100%',
+    borderRadius: '1%'
   },
   chips: {
     marginTop: '10px',
