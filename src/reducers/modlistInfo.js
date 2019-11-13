@@ -2,7 +2,7 @@ import { FETCH_README, SET_MODLIST } from './../actions/modlistInfoAction';
 
 const initialState = {
   readme: "",
-  item: {links: []}
+  item: {links: [], download_metadata: []}
 }
 
 const modlistInfo = (state = initialState, action) => {

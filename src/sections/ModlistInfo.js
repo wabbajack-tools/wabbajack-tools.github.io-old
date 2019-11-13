@@ -56,7 +56,9 @@ class ModlistInfo extends Component{
     {this.props.modlist.links.image !== "" ?
     <img src={this.props.modlist.links.image} className={classes.image} alt={uuid.v4()}/>
     : (<React.Fragment/>)}
-    <Typography variant="caption">Created by {this.props.modlist.author}, current version: {this.props.modlist.version}</Typography>
+    {this.props.modlist.download_metadata !== undefined ?
+      <Typography variant="caption">Created by {this.props.modlist.author}, current version: {this.props.modlist.version} | Number of Archives: {this.props.modlist.download_metadata.NumberOfArchives}</Typography>
+    : <Typography variant="caption">Created by {this.props.modlist.author}, current version: {this.props.modlist.version}</Typography>}
     <div className={classes.chips}>
         <Chip
           key={uuid.v4()}
