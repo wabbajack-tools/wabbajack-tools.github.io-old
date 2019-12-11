@@ -26,7 +26,7 @@ export default function Footer() {
           </ListItem>
           <ListItem className={classes.listItem}>
             <a
-              href="https://discord.gg/zgbrkmA"
+              href="https://discord.gg/wabbajack"
               className={classes.link}
               target="_blank"
               rel="noopener noreferrer"

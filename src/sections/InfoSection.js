@@ -115,7 +115,7 @@ export default function InfoSection(){
          here
       </a>
       . For the latest updates and news check out our <a
-        href="https://discord.gg/zgbrkmA"
+        href="https://discord.gg/wabbajack"
         target="_blank"
         rel="noopener noreferrer"
         className={classes.link}>
