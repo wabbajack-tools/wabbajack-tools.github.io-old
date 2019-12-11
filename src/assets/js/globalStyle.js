@@ -45,29 +45,49 @@ const boxShadow = {
 };
 
 const card = {
-  display: "inline-block",
-  position: "relative",
-  width: "100%",
-  margin: "25px 0",
-  boxShadow: "0 1px 4px 0 rgba(0, 0, 0, 0.14)",
-  borderRadius: "3px",
+  border: "0",
+  marginBottom: "30px",
+  marginTop: "30px",
+  borderRadius: "6px",
   color: "rgba(0, 0, 0, 0.87)",
-  background: "#fff"
+  background: "#fff",
+  width: "100%",
+  boxShadow:
+    "0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12)",
+  position: "relative",
+  display: "flex",
+  flexDirection: "column",
+  minWidth: "0",
+  wordWrap: "break-word",
+  fontSize: ".875rem",
+  transition: "all 300ms linear"
 };
 
 const defaultFont = {
   fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
   fontWeight: "300",
-  lineHeight: "1.5em"
+  lineHeight: "1.5em",
+  color: '#FFFFFF'
 };
 
-const primaryColor = "#9c27b0";
-const warningColor = "#ff9800";
-const dangerColor = "#f44336";
-const successColor = "#4caf50";
-const infoColor = "#00acc1";
-const roseColor = "#e91e63";
-const grayColor = "#999999";
+const primaryColor = "#BB86FC";
+const warningColor = "#FCBB86";
+const dangerColor = "#CF6679";
+const successColor = "#C7FC86";
+const infoColor = "#03DAC6";
+const roseColor = "#FC86C7";
+const grayColor = "#121212";
+
+const elevation0 = "#121212";
+const elevation1 = "#1E1E1E";
+const elevation2 = "#222222";
+const elevation3 = "#242424";
+const elevation4 = "#272727";
+const elevation6 = "#2C2C2C";
+const elevation8 = "#2D2D2D";
+const elevation12 = "#323232";
+const elevation16 = "#353535";
+const elevation24 = "#383838";
 
 const primaryBoxShadow = {
   boxShadow:
@@ -148,7 +168,7 @@ const defaultBoxShadow = {
 };
 
 const title = {
-  color: "#3C4858",
+  color: primaryColor,
   margin: "1.75rem 0 0.875rem",
   textDecoration: "none",
   fontWeight: "700",
@@ -187,6 +207,16 @@ export {
   infoColor,
   roseColor,
   grayColor,
+  elevation0,
+  elevation1,
+  elevation2,
+  elevation3,
+  elevation4,
+  elevation6,
+  elevation8,
+  elevation12,
+  elevation16,
+  elevation24,
   primaryBoxShadow,
   infoBoxShadow,
   successBoxShadow,

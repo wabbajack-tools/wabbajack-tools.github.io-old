@@ -1,0 +1,80 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import uuid from 'uuid';
+import underscore from 'underscore';
+
+import { getGameName } from './../../utils/Games';
+
+import { makeStyles } from '@material-ui/core/styles';
+
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent'
+import CardMedia from '@material-ui/core/CardMedia';
+import CardActions from '@material-ui/core/CardActions';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import Divider from '@material-ui/core/Divider';
+import Chip from '@material-ui/core/Chip';
+
+import style from './../../assets/js/components/cardGalleryStyle';
+
+const useStyles = makeStyles(style);
+
+export default function CardGallery(props){
+  const classes = useStyles();
+  const { modlist } = props;
+  const { title, author, description, links, tags, game } = modlist;
+  const { image, machineURL } = links;
+  let newURL = "modlist/"+machineURL;
+  let newImage = image;
+  if(image === ""){
+    newImage = "https://raw.githubusercontent.com/wabbajack-tools/wabbajack/master/Wabbajack/UI/none.jpg";
+  }
+  return(
+    <Card className={classes.card}>
+    {/*<CardHeader
+      disableTypography={true}
+      className={classes.classHeader}
+    subheader={gameName}/>
+    <span className={classes.classHeader}>{gameName}</span>*/}
+    <CardMedia
+      component='img'
+      className={classes.cardMedia}
+      image={newImage}
+      title={title}
+      />
+    <CardContent>
+      <Typography variant="h1" component="h2" className={classes.cardTitle}>{title} by {author}</Typography>
+      <Typography variant="body2" className={classes.cardBody}>{description}</Typography>
+      <Divider className={classes.cardDivider}/>
+      <div className={classes.cardChipContainer}>
+      <Chip
+        key={uuid.v4()}
+        label={getGameName(game)}
+        className={classes.cardChip}
+        size="small"
+        />
+      {underscore.map(tags, (tag) => {
+        return(
+          <Chip
+            key={uuid.v4()}
+            label={tag}
+            className={classes.cardChip}
+            size="small"
+            />
+        );
+      })}
+      </div>
+    </CardContent>
+    <CardActions>
+      <Button size="small" className={classes.cardButton} href={newURL}>
+        <Typography variant="button">View</Typography>
+      </Button>
+    </CardActions>
+    </Card>
+  );
+}
+
+CardGallery.propTypes = {
+  modlist: PropTypes.object.isRequired
+}

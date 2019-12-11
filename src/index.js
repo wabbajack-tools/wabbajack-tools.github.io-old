@@ -1,10 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import { configureStore, history } from './store';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import './assets/scss/wabbajack.scss';
 
-if(process.env.NODE_ENV === "production"){
-  serviceWorker.register();
-}
+const store = configureStore();
+
+ReactDOM.render(<App store={store} history={history}/>, document.getElementById('root'));
+
+//if(process.env.NODE_ENV === "production"){
+//  serviceWorker.register();
+//}

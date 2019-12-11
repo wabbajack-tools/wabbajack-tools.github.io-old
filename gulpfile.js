@@ -8,7 +8,7 @@ function reactBuild(){
 }
 
 function moveFiles(){
-    return src(['./public/CNAME','./README.md','./LICENSE.txt'])
+    return src(['./public/CNAME', './public/404.html', './README.md','./LICENSE.txt'])
     .pipe(dest('./build/'));
 }
 
