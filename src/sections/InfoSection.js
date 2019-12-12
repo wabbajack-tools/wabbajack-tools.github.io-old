@@ -17,7 +17,7 @@ export default function InfoSection(){
   const classes = useStyles();
   return(
     <div className={classes.section}>
-      <h2 className={classes.title}>An automated Modlist installer for TES/Fallout games</h2>
+      <h2 className={classes.title}>An automated Modlist installer</h2>
       <h5 className={classes.description}>
       Modding is hard and time-consuming. Some of us spent decades modding their favorite games,
       investing hours into downloading, installing, testing, adjusting and playing with their setup.
@@ -25,7 +25,7 @@ export default function InfoSection(){
       have a working modded setup for their game of choice.
       </h5>
       <h5 className={classes.description}>
-      Using a Mod Organizer 2 folder and profile, Wabbajack can generate a list of
+      Using a Mod Organizer 2 folder and profile or a Vortex installation, Wabbajack can generate a list of
       instructions to recreate the entire setup on another machine. Instead of following a written
       guide of a specific Modlist step by step, you can simply download the instructions, point
       Wabbajack to the file and wait for it to finish.
@@ -44,7 +44,7 @@ export default function InfoSection(){
         <Grid item xs>
           <CardRequirement
             title="Wabbajack"
-            image="https://raw.githubusercontent.com/wabbajack-tools/wabbajack/master/Branding/PNGs/Banner.png"
+            image="https://raw.githubusercontent.com/wabbajack-tools/wabbajack/master/Branding/PNGs/Wabba_Mouth.png"
             description="Project is available on Github"
             link="https://github.com/wabbajack-tools/wabbajack/releases"
             linkName="Download"/>
@@ -70,8 +70,34 @@ export default function InfoSection(){
         </Grid>
       </Grid>
 
+      <h3 className={classes.titleSecond}>Troubleshooting</h3>
+      <h5 className={classes.description}>
+      If you have trouble installing/building a Modlist head over to our <a
+        href="https://discord.gg/wabbajack"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={classes.link}>
+        Discord </a>
+      and ask for help in the respective channel. If your Modlist is not in the gallery than ask
+      the person who compiled it for support. Asking for support on other Discord servers or on reddit
+      is only bound to have your post removed. <b>For immediate support, please visit us on the <a
+      href="https://discord.gg/wabbajack"
+      target="_blank"
+      rel="noopener noreferrer"
+      className={classes.link}>
+      Discord </a>.</b>
+      </h5>
+
       <h3 className={classes.titleSecond}>Building a Modlist:</h3>
       <h3 className={clsx(classes.titleSecond, classes.left)}>Requirements</h3>
+      <h5 className={classes.description}>
+      (choose between MO2 or Vortex, see the supported games list on <a
+      href="https://github.com/wabbajack-tools/wabbajack#supported-games-and-mod-manage"
+      className={classes.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      >GitHub</a> to know what mod manager you need to use)
+      </h5>
       <Grid
         container
         direction="row"
@@ -83,7 +109,7 @@ export default function InfoSection(){
         <Grid item xs>
           <CardRequirement
             title="Wabbajack"
-            image="https://raw.githubusercontent.com/wabbajack-tools/wabbajack/master/Branding/PNGs/Banner.png"
+            image="https://raw.githubusercontent.com/wabbajack-tools/wabbajack/master/Branding/PNGs/Wabba_Mouth.png"
             description="Project is available on Github"
             link="https://github.com/wabbajack-tools/wabbajack/releases"
             linkName="Download"/>
@@ -92,9 +118,18 @@ export default function InfoSection(){
         <Grid item xs>
           <CardRequirement
             title="Mod Organizer 2"
-            image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstaticdelivery.nexusmods.com%2Fmods%2F1151%2Fimages%2Fthumbnails%2F28715%2F28715-1525726677-439267467.png&f=1&nofb=1"
+            image="https://raw.githubusercontent.com/wabbajack-tools/wabbajack-tools.github.io/code/src/assets/img/MO2.png"
             description=""
             link="https://www.nexusmods.com/skyrimspecialedition/mods/6194"
+            linkName="Download"/>
+        </Grid>
+
+        <Grid item xs>
+          <CardRequirement
+            title="Vortex"
+            image="https://raw.githubusercontent.com/wabbajack-tools/wabbajack-tools.github.io/code/src/assets/img/Vortex.png"
+            description=""
+            link="https://www.nexusmods.com/site/mods/1/"
             linkName="Download"/>
         </Grid>
 
