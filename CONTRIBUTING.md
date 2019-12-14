@@ -10,6 +10,7 @@ The actual code and development takes place on the `code` branch.
 1. [Node](https://nodejs.org/en/) (recommend version 8.16.x)
 2. [Yarn](https://yarnpkg.com/lang/en/)
 3. [VS Code](https://code.visualstudio.com)
+4. [Redux DevTools](https://extension.remotedev.io/)
 
 ### Installing
 
